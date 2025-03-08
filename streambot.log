@@ -1,0 +1,158 @@
+[08/03/2025 18:19:02] {C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py:73} ERROR - Traceback (most recent call last):
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py", line 69, in <module>
+    loop.run_until_complete(start_services())
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py", line 52, in start_services
+    await web.TCPSite(server, Server.BIND_ADDRESS, Server.PORT).start()
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiohttp\web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1571, in create_server
+    raise OSError(err.errno, msg) from None
+PermissionError: [Errno 13] error while attempting to bind on address ('0.0.0.0', 8080): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions
+
+[08/03/2025 18:21:17] {C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py:73} ERROR - Traceback (most recent call last):
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py", line 69, in <module>
+    loop.run_until_complete(start_services())
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\__main__.py", line 52, in start_services
+    await web.TCPSite(server, Server.BIND_ADDRESS, Server.PORT).start()
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiohttp\web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1571, in create_server
+    raise OSError(err.errno, msg) from None
+PermissionError: [Errno 13] error while attempting to bind on address ('0.0.0.0', 8080): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions
+
+[08/03/2025 18:22:52] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py:253} ERROR - Peer id invalid: -1001002344890751
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1001002344890751'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\bot\plugins\start.py", line 19, in start
+    if not await verify_user(bot, message):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\bot_utils.py", line 210, in verify_user
+    await is_user_exist(bot, message)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\bot_utils.py", line 189, in is_user_exist
+    await bot.send_message(
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\messages\send_message.py", line 128, in send_message
+    peer=await self.resolve_peer(chat_id),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1001002344890751
+[08/03/2025 18:23:45] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\utilities\idle.py:75} INFO - Stop signal received (SIGINT). Exiting...
+[08/03/2025 18:24:39] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py:253} ERROR - Peer id invalid: -1002344890751
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002344890751'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\bot\plugins\stream.py", line 39, in private_receive_handler
+    await get_file_ids(False, inserted_id, multi_clients, message)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 22, in get_file_ids
+    log_msg = await send_file(FileStream, db_id, file_info['file_id'], message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 130, in send_file
+    log_msg = await client.send_cached_media(chat_id=Telegram.FLOG_CHANNEL, file_id=file_id,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002344890751
+[08/03/2025 18:26:37] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\utilities\idle.py:75} INFO - Stop signal received (SIGINT). Exiting...
+[08/03/2025 18:27:27] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py:253} ERROR - Peer id invalid: -1001002344890751
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1001002344890751'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\bot\plugins\stream.py", line 39, in private_receive_handler
+    await get_file_ids(False, inserted_id, multi_clients, message)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 22, in get_file_ids
+    log_msg = await send_file(FileStream, db_id, file_info['file_id'], message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 130, in send_file
+    log_msg = await client.send_cached_media(chat_id=Telegram.FLOG_CHANNEL, file_id=file_id,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1001002344890751
+[08/03/2025 18:28:48] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\utilities\idle.py:75} INFO - Stop signal received (SIGINT). Exiting...
+[08/03/2025 18:30:41] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py:253} ERROR - Peer id invalid: -1001002344890751
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1001002344890751'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\bot\plugins\stream.py", line 39, in private_receive_handler
+    await get_file_ids(False, inserted_id, multi_clients, message)
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 22, in get_file_ids
+    log_msg = await send_file(FileStream, db_id, file_info['file_id'], message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\Desktop\FileStreamBot-main\FileStream\utils\file_properties.py", line 130, in send_file
+    log_msg = await client.send_cached_media(chat_id=Telegram.FLOG_CHANNEL, file_id=file_id,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\messages\send_cached_media.py", line 103, in send_cached_media
+    peer=await self.resolve_peer(chat_id),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1001002344890751
+[08/03/2025 18:35:37] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\utilities\idle.py:75} INFO - Stop signal received (SIGINT). Exiting...
+[08/03/2025 18:37:53] {C:\Users\vaibh\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyrogram\methods\utilities\idle.py:75} INFO - Stop signal received (SIGINT). Exiting...
