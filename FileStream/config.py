@@ -28,21 +28,18 @@ class Telegram:
     AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "")).split()))
 
 class Server:
-    BIND_ADDRESS = "0.0.0.0"  # Allows all incoming connections
     PORT = 8080  # Standard port
-    PING_INTERVAL = "1200"
+    BIND_ADDRESS = "0.0.0.0"  # Allows all incoming connections
+    PING_INTERVAL = 1200  # Integer value
     
     HAS_SSL = False  # Set to True if you want SSL support
     NO_PORT = False  # Set to True if you want to omit the port in the URL
-    FQDN = "localhost"
-    
-    PUBLIC_URL = "localhost"  # Default public URL
+    FQDN = BIND_ADDRESS  # Default to BIND_ADDRESS, can be changed manually
 
     URL = "http{}://{}{}/".format(
         "s" if HAS_SSL else "",
-        PUBLIC_URL,
+        FQDN,
         "" if NO_PORT else ":" + str(PORT)
     )
-
 
 
